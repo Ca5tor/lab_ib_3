@@ -1,5 +1,5 @@
 #pragma once
-
+#include "MyForm.h"
 namespace labib3 {
 
 	using namespace System;
@@ -118,6 +118,7 @@ namespace labib3 {
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"Ñôîðìèðîâàòü ïàðîëü";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
 			// label1
 			// 
@@ -334,13 +335,14 @@ namespace labib3 {
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
 			this->ClientSize = System::Drawing::Size(513, 254);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
 			this->Name = L"MyForm";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"ËÀÁÎÐÀÒÎÐÍÀß ÐÀÁÎÒÀ ¹ 3";
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
@@ -352,5 +354,7 @@ namespace labib3 {
 
 		}
 #pragma endregion
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e);
+	
+};
 }
