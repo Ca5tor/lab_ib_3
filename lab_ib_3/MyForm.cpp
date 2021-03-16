@@ -28,7 +28,7 @@ bool InputValidation(TextBox^ Tx, String^ s, double& d) {
 }
 
 System::Void labib3::MyForm::button1_Click(System::Object^ sender, System::EventArgs^ e){
-
+	setlocale(0, "");
 	double P = 0., V = 0., T = 0.;
 
 	if (!InputValidation(textBox1, "¬ведите значение P", P)) return;
